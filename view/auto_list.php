@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'view/header_cust.php'; ?>
 <main>
   <h2>Available Autos</h2>
 <section>

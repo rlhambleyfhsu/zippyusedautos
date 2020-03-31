@@ -26,7 +26,7 @@ header {
     color: #FFFFFF;
     font-size: 100%;
 	height: 120px;
-	text-align: center;
+	text-align: left;
 	padding-top: 30px;
 	padding-left: 3em;
 }
@@ -36,21 +36,13 @@ h1 {background-color:#000033;
 	font-family: "Georgia, Times New Roman sans-serif";
 	font-size: 3em;
 	letter-spacing: .1em;}
-nav {
-	float: left;
-	width: 160px;
-	margin-top:0px;
-	font-weight: bold;
-	padding: 1.5em;
-	font-size: 120%;
-	/*float: left; */}
 main {
 		background-color: #FFFFFF;
 		padding-top: 1px;
 		padding-right: 1px;
 		padding-left: 30px;
 		padding-bottom: 1px;
-		margin-left: 190px;
+	/*	margin-left: 190px;*/
 		margin-top: 0px;
         color: #000000;
 	}
@@ -74,104 +66,31 @@ nav a { text-decoration: none;
 nav a:link { color: #5C7FA3; }
 nav a:visited { color: #344873; }
 nav a:hover { color: #A52A2A; }
-table { margin: auto;
-	border: 2px solid 	#3399CC;
-	border-spacing: 0;
-	border-collapse: collapse;
+table {
+    border-radius: 1em;
+    width: 90%;
 }
-td, th { padding:  0.5em;
-	border: 2px solid 	#3399CC; }
-td {text-align: center; }
-.text {text-align: left; }
+td, th {
+    border: 1px solid black;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: left;
+}
 tr:nth-of-type(odd) {
 	background-color: #F5FAFC;
 }
 label { float: left;
 		display: block;
-        width: 120px;
 	    padding-right: 10px;
 	    text-align: right; }
 input,textarea { display: block;
 	margin-bottom: 20px; }
 input[type="submit"] { margin-left: 130px; }
 
-#gallery {
-   position: relative;
-   height: 200px; }
-
-#gallery ul {
-   list-style-type: none;
-       width: 300px;
-   }
-
-#gallery li {
-   display: inline;
-        float: left;
-   padding: 10px;
-   }
-
-#gallery img {
-   border-style: none;
-   }
-
-#gallery a {
-   text-decoration: none;
-        text-align: left;
-   color: blue;
-   }
-
-#gallery span {
-   position: absolute;
-        left: -1000px;
-        opacity: 0;
-   }
-
-#gallery a:hover span {
-           position: absolute;
-           top: 16px;
-           left: 320px;
-           text-align: center;
-                   opacity: 1;
+#Register {
+           text-align:right;
+       		padding-right: .75em;
        }
-figure {
-    position: absolute;
-    left: 280px;
-    text-align: center;
-    opacity: .2;
-}
-main ul {
-		list-style-image: url(marker.gif);
-}
-main ul li {
-		padding-top: .25em;
-		padding-bottom: .25em;
-		padding-left: .75em;
-		padding-right: .75em;
-}
-#homehero {
-	height: 300px;
-	margin-left: 190px;
-	background-image: url(coast2.jpg);
-	background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-}
-#yurthero {
-	height: 300px;
-	margin-left: 190px;
-	background-image: url(yurt.jpg);
-	background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-}
-#trailhero {
-	height: 300px;
-	margin-left: 190px;
-	background-image: url(trail.jpg);
-	background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-}
 footer { font-size: 75%;
        text-align: center;
 	   font-style: italic;
@@ -197,51 +116,19 @@ video,embed {float:right;
 		box-shadow: none;
 		border: none;
 	}
-	nav {
-		float: none;
-		display: inline;
-		width: auto;
-		text-align: center;
-		padding: 0.5em;
-	}
+
 	header {
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		padding-left: 0em;
 		height: auto;
 	}
-
+  table {
+    width:90%;
+    margin:.5em;
+    }
 	h1{
 		letter-spacing: 0.1em;
-	}
-
-
-	nav li {
-		display: inline-block;
-		padding-bottom: 0.25em;
-		padding-top: 0.25em;
-		padding-right: 0.75em;
-		padding-left: 0.75em;
-	}
-	#homehero {
-	height: 200px;
-	margin-left: 0px;
-	background-image: url(coast2.jpg);
-    background-repeat: no-repeat;
-
-	}
-	#yurthero {
-	height: 200px;
-	margin-left: 0px;
-	background-image: url(yurt.jpg);
-    background-repeat: no-repeat;
-
-	}
-	#trailhero {
-	height: 200px;
-	margin-left: 0px;
-	background-image: url(trail.jpg);
-    background-repeat: no-repeat;
 	}
 }
 @media only screen and (max-width: 37.5em)
@@ -251,9 +138,12 @@ main{
 		padding-top: 0.1em;
 		padding-right: 1em;
 		padding-left: 1em;
-		font-size: 90%;
+		font-size: 80%;
 		margin-left: 0px;
 	}
+  body {
+      padding: .5em;
+  }
 	nav{
 		float: none;
 		width: auto;
@@ -261,47 +151,19 @@ main{
 	}
 	header {
 		padding-top:1em;
+		font-size: 80%;
 	}
 	h1{
 		font-size: 2em;
 	}
-	nav, nav ul, nav li { padding: 0; }
-	nav li {
-		display: block;
-		margin: 0;
-		border: 2px solid #330000;
-	}
-	nav ul {
-		text-align: center;
-	}
-	nav a {display: block;
-		padding: 0.5em;
-	}
-
-	#homehero {
-		display: none;
-	height: 0px;
-	width: 0px;
-	background-image: none;
-	background-size: 0% 0%;
-    background-repeat: no-repeat;
-	}
-	#yurthero {
-		display: none;
-	height: 0px;
-	width: 0px;
-	background-image: none;
-	background-size: 0% 0%;
-    background-repeat: no-repeat;
-	}
-	#trailhero {
-		display: none;
-	height: 0px;
-	width: 0px;
-	background-image: none;
-	background-size: 0% 0%;
-    background-repeat: no-repeat;
-	}
+  table {
+    width:100%;
+    margin:.5em;
+    }
+  #Register {
+         text-align:right;
+        padding-right: 1em;
+   }
 	#mobile {display: inline;}
 	#desktop {display: none;}
 	label { float: none;
