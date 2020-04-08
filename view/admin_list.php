@@ -1,12 +1,7 @@
-<?php include 'view/header.php'; ?>
+<?php include 'view/header.php';
+?>
 <main>
   <h2>Available Autos</h2>
-<section>
-  <a href="admin.php?action=get_makes">Manage Makes</a>
-  <a href="admin.php?action=get_types">Manage Types</a>
-  <a href="admin.php?action=get_classes">Manage Classes</a>
-  <a href="admin.php?action=get_autos">Admin Home</a>
-</section>
 <section>
   <form action="admin.php" method="POST" id="selectMake">
      <input type="hidden" name="action" id="selectMake">
@@ -84,7 +79,7 @@
     </form>
 
         <P>
-        <h1>Add Vehicle</h1>
+        <h2>Add Vehicle</h2>
         <form action="admin.php" method="post" id="add_vehicle_form">
           <input type="hidden" name="action" value="add_vehicle">
                <select name="make">
@@ -120,5 +115,6 @@
       </section>
       <P>
 </section>
+<?php include 'view/zippylinks.php'; ?>
 </main>
 <?php include 'view/footer.php'; ?>

@@ -1,15 +1,24 @@
 <?php
+$lifetime = 60 * 60 * 24;
+session_set_cookie_params($lifetime, '/');
+//session_name('adminlogin');
+session_start();
+
 require('model/database.php');
 require('model/auto_db.php');
 require('model/type_db.php');
 require('model/class_db.php');
 require('model/make_db.php');
+require_once('model/admin_db.php');
+require_once('util/valid_admin.php');
+
+
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'get_autos';
+        $action = 'login';
     }
 }
 
@@ -216,5 +225,22 @@ if ($action == 'delete_vehicle')
   $autolist = get_autos($typeid,$makeid,$classid,$sorton,$sort);
   include('view/admin_list.php');
 }
-
+if ($action == 'login')
+{
+}
+if ($action == 'register')
+{
+    include ('zua-register.php');
+}
+if ($action == 'registerform')
+{
+    include ('zua-register.php');
+}
+if ($action == 'logout')
+{
+    $_SESSION = array();
+    session_destroy();
+    echo 'You have been logged out.';
+    include ('zua-login.php');
+}
 ?>

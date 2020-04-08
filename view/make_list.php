@@ -1,12 +1,8 @@
-<?php include 'view/header.php'; ?>
+<?php include 'view/header.php';
+require_once('util/valid_admin.php');
+?>
 <main>
   <h2>Manage Makes</h2>
-  <section>
-    <a href="admin.php?action=get_makes">Manage Makes</a>
-    <a href="admin.php?action=get_types">Manage Types</a>
-    <a href="admin.php?action=get_classes">Manage Classes</a>
-    <a href="admin.php?action=get_autos">Admin Home</a>
-  </section>
 <section>
   <table>
     <tr>
@@ -28,7 +24,7 @@
     </form>
 
     <P>
-    <h1>Add Make</h1>
+    <h2>Add Make</h2>
     <form action="admin.php" method="post" id="add_make_form">
       <input type="hidden" name="action" value="add_make">
     <label>Make:</label>
@@ -40,5 +36,6 @@
   </section>
   <P>
 </section>
+<?php include 'view/zippylinks.php'; ?>
 </main>
 <?php include 'view/footer.php'; ?>
