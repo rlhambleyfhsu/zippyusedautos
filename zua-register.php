@@ -1,4 +1,5 @@
 <?php include 'view/header.php';
+session_start();
 require('model/database.php');
 require_once('model/admin_db.php');
 require_once('util/valid_admin.php');
