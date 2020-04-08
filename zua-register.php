@@ -35,8 +35,7 @@ if ($action == 'register')
   {
     add_admin($username, $password);
     echo "Admin $username Added";
-    $action="get_autos";
-    include('view/admin.php');
+    include('view/zippylinks.php');
   }
   else {
     $action ='registerform';
