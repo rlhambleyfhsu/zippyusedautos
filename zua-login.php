@@ -63,4 +63,4 @@ if ($action == 'loginform')
   </main>
 <?php }  ?>
 
-<? php include 'view/footer.php';  ?>
+<?php include 'view/footer.php';  ?>
